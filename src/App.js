@@ -1,5 +1,3 @@
-import Potato from './Potato';
-
 function App() {
   return (
     <div className="App">
@@ -8,5 +6,11 @@ function App() {
     </div>
   );
 }
+
+function Potato() {
+  return (
+  <h3>I love potato</h3> //JSX문법
+    );
+  }
 
 export default App
