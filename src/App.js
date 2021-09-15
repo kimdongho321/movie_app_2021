@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       {
-        foodlike.map(foo => (<Food name={foo.name} picture={foo.Image} />))
+        foodlike.map(renderFood)
       }
     </div>
   );
