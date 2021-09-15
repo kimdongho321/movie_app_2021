@@ -5,9 +5,13 @@ const foodlike =[
   },
   {
     name: 'bugger',
-    Image: 'https://upload.wikimedia.org/wikipedia/commons/8/8f/NYC-Diner-Bacon-Cheeseburger.jpg'
+    Image: 'https://cdn.eyesmag.com/content/uploads/posts/2020/09/28/fast-food-franchises-serve-hamburger-without-tomatoes-01-52f4f2a6-a73a-4abc-ba3c-419ee2660639.jpg'
   }
 ]
+
+function renderFood(foo) {
+  return <Food name={foo.name} picture={foo.image} />
+}
 
 function App() {
   return (
