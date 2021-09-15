@@ -1,6 +1,6 @@
 # 김동호 201840107
 
-[ 09월 15일 ]
+ [ 09월 15일 ]
 
 <h1>props</h1><br>
 
@@ -18,14 +18,14 @@
 
 <h1>비슷한 컴포넌트 여러개 만들기</h1><br>
 
--  <h2>map() 함수 사용</h2><br>
+- <h2>map() 함수 사용</h2><br>
 const friends = ['a', 'b', 'c', 'd']<br>
     friends.map(function) {<br>
         return friend + "♥";<br>
     })
 
 
-[ 09월 08일 ]
+ [ 09월 08일 ]
 - 앱 생성 및 수정
 
 <h1>react</h1><br>
