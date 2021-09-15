@@ -15,7 +15,7 @@ function renderFood(foo) {
 
 function App() {
   return (
-    <div className="App">
+    <div>
       {
         foodlike.map(renderFood)
       }
