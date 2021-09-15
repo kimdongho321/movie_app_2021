@@ -12,15 +12,16 @@ const foodlike =[
 function App() {
   return (
     <div className="App">
-      <h1>Hello React</h1>
-      <Food fav="kimchi" something={true} papapa={['hello', 1, 2, true]}/> {/* boolean,배열가능 */}
+      {
+        foodlike.map(foo => (<Food name={foo.name} />))
+      }
     </div>
   );
 }
 
-function Food(props) {
+function Food({name}) {
   return (
-  <h3>I love {props.fav}</h3> //JSX문법
+  <h3>I love {name}</h3> //JSX문법
     );
   }
 
