@@ -18,6 +18,15 @@
 
 - 데이터의 개수가 많아지면 구조 분할 할당을 사용하는 것이 편하다.
 
+<h1>비슷한 컴포넌트 여러개 만들기</h1><br>
+
+-  <h2>map() 함수 사용</h2><br>
+const friends = ['a', 'b', 'c', 'd']<br>
+    friends.map(function) {<br>
+        return friend + "♥";<br>
+    })
+
+
 [ 09월 08일 ]
 - 앱 생성 및 수정
 
