@@ -3,16 +3,12 @@ function App() {
   return (
     <div className="App">
       <h1>Hello React</h1>
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
+      <Food fav="kimchi"/>
     </div>
   );
 }
 
-function Movie() {
+function Food() {
   return (
   <h3>I love potato</h3> //JSX문법
     );
