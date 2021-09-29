@@ -1,7 +1,7 @@
 const foodlike =[
   {
     name: 'Pizza',
-    Image: 'https://cdn.dominos.co.kr/admin/upload/goods/20200311_x8StB1t3.jpg',
+    Image: 'https://cdn.dominos.co.kr/admin/upload/goods/20200311_x8StB1t3.jpg'
   },
   {
     name: 'bugger',
