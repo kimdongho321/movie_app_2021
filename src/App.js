@@ -10,12 +10,10 @@ class App extends Component{
     }
 
     add = () => {
-        console.log('add')
         this.setState(current => ({count: this.state.count +1}))
     }
   
     minus = () => {
-        console.log('minus')
         this.setState(current => ({count: this.state.count -1}))
     }
   render() {
@@ -24,7 +22,6 @@ class App extends Component{
           <h1>The number is: {this.state.count}</h1>
             <button onClick={this.add}>Add</button>
             <button onClick={this.minus}>Minus</button>
-            <button>Add</button>
             </div>
           )
   }
