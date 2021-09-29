@@ -5,7 +5,8 @@
 <h1>git master</h1><br>
 
 <h3> git branch -> git master 변경</h3><br>
-git config --global init.defaultBranch main<br>
+
+- git config --global init.defaultBranch main<br>
 - 다시 branch로 변경시 위 명령어에서 main -> branch 
 
 <h1>React Project 클론하기</h1><br>
