@@ -11,7 +11,7 @@ const foodlike =[
 
 function renderFood(foo) {
   return <Food name={foo.name} picture={foo.image} />
-} //App함수에서 따로 뺌
+}//App 안에 넣었던 renderFood를 따로 빼서 함수로 만듦
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
       }
     </div>
   );
-}// 따로 뺀 renderFood를 map을 써서 App함수에 인자로 전달
+}// 따로 뺐던 renderFood를 map을 사용하여 인자로 전달
 
 function Food({name, picture}) {
   return (
