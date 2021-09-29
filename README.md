@@ -1,5 +1,20 @@
 # 김동호 201840107
 
+# [ 09월 29일]
+
+<h1>git master</h1><br>
+
+<h3> git branch -> git master 변경</h3><br>
+git config --global init.defaultBranch main<br>
+- 다시 branch로 변경시 위 명령어에서 main -> branch 
+
+<h1>React Project 클론하기</h1><br>
+
+- 다른 프로젝트와 달리 리액트는 설치후 개발함
+- github에서 코드복사 후 git clone 붙여넣기
+- npm install
+- npm start // 실행 확인
+
 # [ 09월 15일 ]
 
 <h1>props</h1><br>
