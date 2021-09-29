@@ -16,6 +16,10 @@ const foodlike =[
     rating: 5.0
   }
 ]
+function renderFood(foo) {
+    return <Food name={foo.name} picture={foo.image} />
+  }//App 안에 넣었던 renderFood를 따로 빼서 함수로 만듦
+
 const renderFood = dish => <Food
 key={dish.id}
 name={dish.name}
@@ -33,7 +37,7 @@ function App() {
         }
       </div>
     );
-  }
+  }// 따로 뺐던 renderFood를 map을 사용하여 인자로 전달
 
 Food.propTypes={
     name: PropTypes.string.isRequired,

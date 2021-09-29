@@ -15,6 +15,11 @@ git config --global init.defaultBranch main<br>
 - npm install
 - npm start // 실행 확인
 
+<h1>State</h1><br>
+
+- props는 정적인 데이터만 다룰 수 있기 때문에 동적인 데이터를 다루기 위해 state를 사용.
+- state는 class형 컴포넌트에서 사용됨.
+
 # [ 09월 15일 ]
 
 <h1>props</h1><br>
