@@ -1,5 +1,15 @@
 # 김동호 201840107
 
+# [ 10월 06일]
+
+<h1>클래스형 컴포넌트</h1><br>
+
+- constructor(생성자)<br> 
+- componentDidMount()<br>
+- componentDidUpdate()<br>
+- componentWillUnmount() > 이벤트 리스너 제거<br>
+
+
 # [ 09월 29일]
 
 <h1>git master</h1><br>
