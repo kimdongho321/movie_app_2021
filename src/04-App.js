@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+/* import PropTypes from 'prop-types' */
 
 const foodlike =[
   {
@@ -55,4 +55,4 @@ Food.propTypes={
       );
     }
   
-  export default App //꼭 써야 외부에서 사용가능
+/*   export default App */ //꼭 써야 외부에서 사용가능

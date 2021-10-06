@@ -9,6 +9,13 @@
 - componentDidUpdate()<br>
 - componentWillUnmount() > 이벤트 리스너 제거<br>
 
+<h1>영화 평점 사이트 제작</h1><br>
+
+- https://yts.mx/api/v2/list_movies.json > 이미지 링크 참고<br>
+- yts-proxy.now.sh/list_movies.jason에 movie_id를 추가해야한다.
+- ex)yts-proxy.now.sh/list_movies.jason?movie_id=10은 아이디가 10인 영화의 정보 출력
+- async > 시간 딜레이시키기<br> async 사용후 필요한 부분에 await 사용 (App.js 9~11줄)
+
 
 # [ 09월 29일]
 
