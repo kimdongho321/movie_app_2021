@@ -5,7 +5,7 @@ function Movie({id, year, title, summary, poster}) {
     )
 }
 
-Movie.PropTypes = {
+Movie.propTypes = {
     id: PropTypes.number.isRequired,
     year: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
