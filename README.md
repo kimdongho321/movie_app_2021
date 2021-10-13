@@ -1,6 +1,19 @@
 # 김동호 201840107
 
-# [ 10월 06일]
+# [ 10월 13일 ]
+
+- readme
+* 스페이스바 두번 누르면 칸이동 br 사용 자제
+* ```javascript 입력 하고 $ 뒤에 코드입력
+ ex) ```javascript 
+$ class App extends Component{
+    state = {
+        isLoading: true,
+        movies: []
+    }
+
+
+# [ 10월 06일 ]
 
 <h1>클래스형 컴포넌트</h1><br>
 
@@ -11,6 +24,9 @@
 
 <h1>영화 평점 사이트 제작</h1><br>
 
+- axios 설치 (npm install axios)
+- yts.lt/api 접속 후 영화 목록 데이터 확인
+- JSON Viewer 확장 도구 설치(브라우저에서 검색 후 설치)
 - https://yts.mx/api/v2/list_movies.json > 이미지 링크 참고<br>
 - yts-proxy.now.sh/list_movies.jason에 movie_id를 추가해야한다.
 - ex)yts-proxy.now.sh/list_movies.jason?movie_id=10은 아이디가 10인 영화의 정보 출력
