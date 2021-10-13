@@ -2,16 +2,22 @@
 
 # [ 10월 13일 ]
 
-- readme
+<h1> readme</h1>
+
 * 스페이스바 두번 누르면 칸이동 br 사용 자제
-* ```javascript 입력 하고 $ 뒤에 코드입력
- ex) ```javascript 
-$ class App extends Component{
+  
+* pre,
+code 입력 하고
+ ex)
+ <pre>
+<code>
+class App extends Component{
     state = {
         isLoading: true,
         movies: []
     }
-
+    </code>
+    </pre>
 
 # [ 10월 06일 ]
 

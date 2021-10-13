@@ -1,6 +1,7 @@
 import React, {Component, useDebugValue} from 'react';
 import axios from 'axios';
 import Movie from './Movie'
+import './App.css'
 class App extends Component{
     state = {
         isLoading: true,
@@ -25,25 +26,25 @@ class App extends Component{
     render() {
        const {isLoading, movies} = this.state
         return (
-            <section class = 'container'>
+            <section className = 'container'>
             {isLoading ?(
-                <div class = 'loader'>
-                    <span class = 'loader-class'>Loading...</span>
+                <div className = 'loader'>
+                    <span className = 'loader-class'>Loading...</span>
                 </div>
             )
             :
             (
-            <div class = 'movies'>
+            <div className = 'movies'>
              {
  movies.map((movie) => {
     return(
         <Movie
         key = {movie.id}
-        id = {movie.id}
         year = {movie.year}
         title = {movie.title}
         summary = {movie.summary}
         poster = {movie.medium_cover_image}
+        genres = {movie.genres}
         />
             )
                         }
