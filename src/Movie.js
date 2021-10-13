@@ -1,4 +1,4 @@
-import PropTypes from 'prop-tyeps'
+import PropTypes from 'prop-types'
 function Movie({id, year, title, summary, poster}) {
     return(
         <h4>{title}</h4>
