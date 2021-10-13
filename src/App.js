@@ -25,24 +25,34 @@ class App extends Component{
     render() {
        const {isLoading, movies} = this.state
         return (
-            <div>
-            {isLoading 
-            ?'Loading...' 
-            : movies.map((movie) => {
-                //console.log(movie)
-                return(
-                    <Movie
-                    key = {movie.id}
-                    id = {movie.id}
-                    year = {movie.year}
-                    title = {movie.title}
-                    summary = {movie.summary}
-                    poster = {movie.poster}
-                    />
-                )
-            })}
-              </div>
+            <section class = 'container'>
+            {isLoading ?(
+                <div class = 'loader'>
+                    <span class = 'loader-class'>Loading...</span>
+                </div>
             )
-    }//isLoading ? true일때 Loading...출력 : false일때  We are ready 출력
+            :
+            (
+            <div class = 'movies'>
+             {
+ movies.map((movie) => {
+    return(
+        <Movie
+        key = {movie.id}
+        id = {movie.id}
+        year = {movie.year}
+        title = {movie.title}
+        summary = {movie.summary}
+        poster = {movie.medium_cover_image}
+        />
+            )
+                        }
+           )
+             }
+          </div>
+        )}
+    </section>
+            )
+    }
 }
 export default App;
