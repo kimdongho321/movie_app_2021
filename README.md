@@ -1,23 +1,188 @@
 # 김동호 201840107
 
+# [ 10월 27일 ]
+
+<h1>10월 13일 이어서</h1>
+
+* li tag에 key props 추가하기
+
+```
+<ul className="movie__genres">
+genres.map ((genre,index)) => {
+    <li key ={index} className="movie-genre">
+    {genre}
+   </li>
+    );
+})}
+```
+* App.CSS 수정하기
+> https://github.com/easysiT 7장에서 css 복사 후 붙여넣기
+
+* 영화 앱 제목 바꾸기
+> public 폴더의 index.html에서 title 수정
+
+
+* 시놉시스 180자로 제한하기
+
+> "hereisstring".slice(0,10) // 0부터 10까지 > "hereisstri 로 들어감
+
+```
+<p className="movie-summary">{summary.slice(0,100)}...</p>
+```
+
+<h1> 영화 앱에 여러 기능 사용하기</h1>
+
+
+* react-router-dom 설치
+>간단한 메뉴 추가
+>메뉴를 클릭하면 화면이 이동해야 하는데 이때 필요한 것이 라우터
+> 라우터는 react-router-dom패키지를 이용함
+* react-router-dom 설치
+> npm install react-router-dom
+* components 폴더에 Movie 컴포넌트 옮기기
+> src/components 폴더 만들고 Movie 컴포넌트 이동
+* routes 폴더에 라우터가 보여줄 화면 만들기
+> src/routes 파일 만들고 About.js, Home.js 파일 만들기
+* Home.js 수정
+>App.js 내용을 Home.js로 복사하고 컴포넌트 이름을 Home으로 수정
+>Home.css를 생성하고 Home.js에 import
+* Home.css 만들기/ App.js 수정하기
+>https://github.com/easysiT 8장에서 router > Home.css 복사 후 붙여넣기
+
+<h3>라우터 만들어보기</h3>
+
+* HashRouter와 Router 컴포넌트
+>HashRouter와 Router 컴포넌트 import
+> HashRouter 컴포넌트가 Route 컴포넌트를 감싸 반환하도록 App.js 수정
+
+* Route 컴포넌트에 path와 component 삽입
+> 
+
+
+
+
 # [ 10월 13일 ]
+<h1>영화 앱 스타일링 하기</h1>
 
-<h1> readme</h1>
+* App컴포넌트에 HTML 추가하기
+```
+  <section className = 'container'>
+            {isLoading ?(
+                <div className = 'loader'>
+                    <span className = 'loader-class'>Loading...</span>
+                </div>
+            )
+            :
+            (
+            <div className = 'movies'>
+             {
+ movies.map((movie) => {
+    return(
+        <Movie
+        key = {movie.id}
+        year = {movie.year}
+        title = {movie.title}
+        summary = {movie.summary}
+        poster = {movie.medium_cover_image}
+        genres = {movie.genres}
+        />
+            )
+                        }
+           )
+             }
+          </div>
+        )}
+    </section>
+```
 
-* 스페이스바 두번 누르면 칸이동 br 사용 자제
-  
-* pre,
-code 입력 하고
- ex)
- <pre>
-<code>
-class App extends Component{
-    state = {
-        isLoading: true,
-        movies: []
-    }
-    </code>
-    </pre>
+* Movie 컴포넌트에 HTML 추가하기
+> Movie 컴포넌트가 반환할 JSX를 div class="movie"로 감싼다
+```
+{
+    return(
+
+        <div className='movie'>
+         <img src={poster} alt={title} title={title}/>
+         <div className = 'movie-data'>
+             <h3 className = 'movie-title'>{title}</h3>
+             <h5 className= 'movie-year'>{year}</h5>
+             <p className = 'movie-summary'>{summary}</p>
+         </div>
+        </div>
+    )
+}
+```
+
+* 영화 포스터 이미지 추가하기
+전체 태그를 감싸는 div tag (class="movie")추가
+```
+function Movie({year, title, summary, poster, genres}) {
+    return(
+         <div className = 'movie-data'>
+             <h3 className = 'movie-title'>{title}</h3>
+             <h5 className= 'movie-year'>{year}</h5>
+             <p className = 'movie-summary'>{summary}</p>
+         </div>
+        </div>
+    )
+}
+
+```
+
+* Movie 컴포넌트 정리하기
+> Movie 컴포넌트에 있는 id props 제거  
+> style 속성으로 title 스타일링 하기
+```
+<h3 class="movie-title" style={{backgroundColor:'red'}}>
+{title}
+</h3>
+```
+
+* CSS파일 생성   
+> src 폴더에 App.css,Movie.css 파일 생성
+
+* app,movie컴포넌트에 CSS파일 import
+```
+import './App.css'
+```
+
+<h3> 영화 앱 전체 모습 수정</h3>
+
+> App.css 내용 전부 삭제   
+> Movie 컴포넌트에 genres props 넘겨주기   
+> Movie 컴포넌트 수정하기
+```
+function Movie({ title, year, summary, poster, genres})
+genres: PropTypes.arrayOf(PropTypes.string).isRequired
+```
+
+* App 컴포넌트 수정하기
+
+```
+<Movie
+    (...)
+    poster={move.medium_cover_image}
+    genres={movie.genres}
+>
+```
+
+
+
+* 영화 장르 출력하기
+
+* Movie 컴포넌트에서 장르를 출력하도록 코드 수정
+
+```
+<div className="movie-date"> 
+<h3 className="movie-title"{title}></h3>  
+<h5 className="movie-year{year}/h5>
+<ul className ="movie-genres">
+                 {genres.map((genre, index) => {
+                     return <li key= {index} className="movie-genre">{genre}</li>
+                 })}
+                 </ul>
+             <p className = "movie-summary">{summary}</p>
+```
 
 # [ 10월 06일 ]
 
