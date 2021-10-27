@@ -56,7 +56,12 @@ genres.map ((genre,index)) => {
 > HashRouter 컴포넌트가 Route 컴포넌트를 감싸 반환하도록 App.js 수정
 
 * Route 컴포넌트에 path와 component 삽입
-> 
+```
+<Route path = '/about' component={About}/>
+```
+* 라우터 테스트하고 문제 찾아보기
+> localhost:3000에 접속시 주소 뒤에 자동으로 /#/ 가 붙음
+>/about 에 접속하고 접속 되는지 확인
 
 
 
