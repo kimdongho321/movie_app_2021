@@ -61,8 +61,14 @@ genres.map ((genre,index)) => {
 ```
 * 라우터 테스트하고 문제 찾아보기
 > localhost:3000에 접속시 주소 뒤에 자동으로 /#/ 가 붙음
->/about 에 접속하고 접속 되는지 확인
+>/about 에 접속함
+* About.css 작성하기
+>route 폴더에 About.css 파일 생성하고 https://github.com/easysiT 8장 about.css 복사하여 붙여넣기
 
+<h3>네비게이션 만들기</h3>
+
+* Navigation 컴포넌트 만들기
+> Home과 About 이라는 2개의 버튼을 만들고 각각 링크 주기
 
 
 
