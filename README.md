@@ -1,5 +1,73 @@
 # 김동호 201840107
 
+# [ 11월 03일 ]
+
+<h1>10월 27일이어서</h1>
+
+* a 태그 Link 컴포넌트로 바꾸기
+> Navigation 컴포넌트에 Link 컴포넌트를 import 하고 a 태그를 Link 컴포넌트로 바꿈
+> href 속성은 to로 수정
+```
+<Link to='/'>Home</Link>
+<Link to='/about'>About</Link>
+```
+
+* Navigation.css 생성
+> https://github.com/easysiT 8장에서 css 복사 후 붙여넣기
+
+* Navigation.js 수정
+```
+<div className="nav"> //클래스넣기
+import "./Navigation.css" 
+```
+* App.js 수정
+>Router 추가하기
+```
+<Route path = '/movie-detale' componente={Detail} />
+```
+* Detail.js 생성 및 작성
+```
+function Detail(props){
+    console.log(props);
+    return(
+        <span>hello</span>
+    )
+}
+
+export default Detaile
+```
+
+* route props에 데이터 담아 보내기
+> Navigation 컴포넌트에 있는 Link 컴포넌트의 to props 구조 변경
+
+* 영화 카드를 눌러 /movie-detail로 이동하고 영화 데이터 확인
+> 클릭시 hello 문장 확인, console에 데이터가 들어있음
+
+>url에 /movie-detail 직접 입력시 console에 데이터가 들어있지 않음. 이런경우에 사용자를 강제로 Home으로 돌려 보내야 함.
+
+* 리다이렉트 기능 만들어보기
+> route props의 history 키를 활용
+> history 키에는 push,go,goBack,goForward와 같은 키가 있으며 url을 변경해주는 함수들이 있다.
+
+* detail컴포넌트를 함수형에서 클래스형으로 변경한 후 location, hitory 키를 구조 분해 할당한다.
+> location.state가 undefined인 경우 push 함수를 사용하여 history.push("/")를 실행하도록 한다.
+```
+class Detail extends React.Component {
+    componentDidMount(){
+        const {location,history} = this.props
+        if (location.state === undefined){
+            history.push('/')
+        }
+    }
+    render() {
+        return(
+            <span>Hello</span>
+        )
+    }
+}
+```
+
+
 # [ 10월 27일 ]
 
 <h1>10월 13일 이어서</h1>
