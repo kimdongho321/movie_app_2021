@@ -8,7 +8,7 @@
 
 * 애플리케이션의 사애에 따라 컴포넌트 중 몇개만을 렌더링 할 수 있음 >> 조건부 렌더링
 
-```
+``` 
 function UserGreeting(props) {
   return <h1>Welcome back!</h1>;
 }
